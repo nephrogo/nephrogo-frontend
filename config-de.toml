@@ -1,0 +1,13 @@
+baseURL = "https://www.nephrogo.de/"
+defaultContentLanguage = "de"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+assetDir = "static"
+enableRobotsTXT = true
+googleAnalytics = "G-YXL4JPN3HT"
+
+[imaging]
+resampleFilter = "lanczos"
+quality = 85
+
+[languages]
+  [languages.de]

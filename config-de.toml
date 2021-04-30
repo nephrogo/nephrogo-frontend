@@ -3,7 +3,7 @@ defaultContentLanguage = "de"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 assetDir = "static"
 enableRobotsTXT = true
-googleAnalytics = "G-YXL4JPN3HT"
+googleAnalytics = "G-YV5R2M9BQN"
 
 [imaging]
 resampleFilter = "lanczos"

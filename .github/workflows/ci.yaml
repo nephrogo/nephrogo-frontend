@@ -55,7 +55,8 @@ jobs:
       - name: Build DE
         run: hugo --minify --destination public/de --config config-de.toml
 
-
+      - run: ls -la public/de
+      
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

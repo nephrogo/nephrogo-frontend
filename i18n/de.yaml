@@ -1,0 +1,155 @@
+- id: languageName
+  translation: "DE"
+  
+- id: title
+  translation: "NephroGo - easier control of the chronic kidney disease!"
+
+- id: headerName
+  translation: "NephroGo"
+- id: headerDescription
+  translation: "NephroGo (german) – the app created by nephrologists and nutritionists which helps to follow a proper kidney friendly diet, track your daily intake of nutrients, electrolytes, fluids, energy, record, analyze daily changes of your health condition and to perform peritoneal dialysis comfortably"
+- id: headerMoto
+  translation: "easier control of the chronic kidney disease"
+
+- id: logoDescription
+  translation: NephroGo logo
+
+- id: nextLanguageTitle
+  translation: EN
+- id: nextLanguageURL
+  translation: https://www.nephrogo.com/
+
+- id: googleAnalyticsMeasurementId
+  translation: G-X8PMMMC5PK
+
+# Benefits
+- id: sectionBenefitsTitle
+  translation: "Benefits"
+- id: sectionBenefits1Title
+  translation: "Peritoneal dialysis"
+- id: sectionBenefits1Description
+  translation: "You will perform peritoneal dialysis conveniently with NephroGo"
+- id: sectionBenefits2Title
+  translation: "Proper diet"
+- id: sectionBenefits2Description
+  translation: "You will follow a proper kidney-friendly diet"
+- id: sectionBenefits3Title
+  translation: "Health condition"
+- id: sectionBenefits3Description
+  translation: "You will learn how to observe the status of your health"
+- id: sectionBenefits4Title
+  translation: "Management of CKD"
+- id: sectionBenefits4Description
+  translation: "You will gain self-confidence in managing your CKD"
+- id: sectionBenefits5Title
+  translation: "Reduced burden"
+- id: sectionBenefits5Description
+  translation: "You will reduce the burden of your chronic kidney disease"
+- id: sectionBenefits6Title
+  translation: "Progression of CKD"
+- id: sectionBenefits6Description
+  translation: "You will reduce the progression of CKD"
+
+# Nutrients sector
+- id: sectionNutritionTitle
+  translation: "Personalised counter of nutrients"
+  
+- id: sectionNutritionStatement1Title
+  translation: "Type the product"
+- id: sectionNutritionStatement1Description
+  translation: "Type the product you have eaten and you instantly will find out how much potassium, sodium, phosphorus, proteins, fluids and kilocalories you have consumed."
+- id: sectionNutritionStatement2Title
+  translation: "See the progress of the day"
+- id: sectionNutritionStatement2Description
+  translation: "NephroGo will calculate how much and which electrolytes you can still consume today without causing any damage to your kidneys."
+- id: sectionNutritionStatement3Title
+  translation: "Observe the dynamics of the week"
+- id: sectionNutritionStatement3Description
+  translation: "By checking the summaries of the week, you will know if you have managed to follow a proper kidney friendly diet."
+- id: sectionNutritionStatement4Title
+  translation: "Control your diet"
+- id: sectionNutritionStatement4Description
+  translation: "Control your diet simply and easily with NephroGo."
+
+# Health indicators screen
+- id: sectionHealthIndicatorsTitle
+  translation: "Health status"
+  
+- id: sectionHealthIndicatorsStatement1Title
+  translation: "Record your health data"
+- id: sectionHealthIndicatorsStatement1Description
+  translation: "Record your blood pressure, weight, urine volume, blood glucose, swelling and well-being on a daily basis."
+- id: sectionHealthIndicatorsStatement2Title
+  translation: "Track the dynamics"
+- id: sectionHealthIndicatorsStatement2Description
+  translation: "Track the dynamics of your health status and notice significant changes at an initial stage."
+- id: sectionHealthIndicatorsStatement3Title
+  translation: "Notice significant symptoms"
+- id: sectionHealthIndicatorsStatement3Description
+  translation: "Identify deficiency or excess of electorolytes by monitoring your symptoms."
+- id: sectionHealthIndicatorsStatement4Title
+  translation: "Save the data"
+- id: sectionHealthIndicatorsStatement4Description
+  translation: "Keep the data of your health status in one place: it will help your doctor to understand your daily well-being and the progress of the CKD."
+
+# Peritoneal dialysis
+- id: sectionPeritonealTitle
+  translation: "Peritoneal dialysis"
+  
+- id: sectionPeritonealStatement1Title
+  translation: "Perform peritoneal dialysis"
+- id: sectionPeritonealStatement1Description
+  translation: "NephroGo is suituable for both 'manual' and automatic dialysis."
+- id: sectionPeritonealStatement2Title
+  translation: "Track the dynamics of fluid balance"
+- id: sectionPeritonealStatement2Description
+  translation: "Enter the data of dialysis solutions, amount of urine and drinks and NephroGo will calculate your fluid balance."
+- id: sectionPeritonealStatement3Title
+  translation: "Monitor your health status"
+- id: sectionPeritonealStatement3Description
+  translation: "Record arterial blood pressure, pulse, body weight and urine volume before the dialysis."
+- id: sectionPeritonealStatement4Title
+  translation: "Get a dialysis record"
+- id: sectionPeritonealStatement4Description
+  translation: "NephroGo will prepare a dialysis data sheet for you which you can easily share with your doctor."
+
+
+# Team
+- id: teamSectionTitle
+  translation: "Team"
+- id: giedreRole
+  translation: "Co-founder"
+- id: karolisRole
+  translation: "Co-founder"
+- id: editaRole
+  translation: "Dietitian"
+- id: laurynasRole
+  translation: "Nephrologist"
+
+
+  # Partners
+- id: sectionPartnersTitle
+  translation: "NephroGo partners"
+- id: sectionPartnersEU
+  translation: "European Union"
+- id: sectionPartnersVU
+  translation: "Vilnius University"
+- id: sectionPartnersVUMF
+  translation: "Vilniaus University Faculty of Medicine"
+
+  # Privacy policy
+- id: privacyPolicyPopupText
+  translation: "This website uses 'cookies' to give You the best, most relevant experience. You can find out more about them"
+- id: privacyPolicyPopupLinkText
+  translation: "Privacy policy"
+- id: privacyPolicyPopupAgree
+  translation: "Agree"
+  
+
+  # Footer
+- id: footerFairUseRules
+  translation: "Fair use rules"
+- id: footerPrivacyPolicy
+  translation: "Privacy policy"
+- id: footerAllRightsReserver
+  translation: "All rights reserved "

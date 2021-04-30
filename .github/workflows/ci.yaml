@@ -51,6 +51,10 @@ jobs:
 
       - name: Build EN
         run: hugo --minify --destination public/en --config config-en.toml
+      
+      - name: Build DE
+        run: hugo --minify --destination public/de --config config-de.toml
+
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

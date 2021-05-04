@@ -141,7 +141,7 @@
 
   # Privacy policy
 - id: privacyPolicyPopupText
-  translation: "This website uses 'cookies' to give You the best, most relevant experience. You can find out more about them"
+  translation: "This website uses 'cookies' to give You the best, most relevant experience. You can find out more about them in"
 - id: privacyPolicyPopupLinkText
   translation: "Privacy policy"
 - id: privacyPolicyPopupAgree

@@ -27,7 +27,7 @@ peritonealDialysisStatements = [
 ]
 
 team = [
-    {"name" = "Giedrė Žulpaitė", "role" = "giedreRole", "photo" = "img/team/giedre.jpg", "email" = "giedrezulpaite@gmail.com", "social" = {"facebook" = "https://www.facebook.com/giedre.zulpaite"}},
+    {"name" = "Giedrė Žulpaitė", "role" = "giedreRole", "photo" = "img/team/giedre.jpg", "email" = "giedrezulpaite@gmail.com", "social" = {"facebook" = "https://www.facebook.com/giedre.zulpaite", "linkedin"= "https://www.linkedin.com/in/giedre-zulpaite/"}},
     {"name" = "Karolis Vyčius", "role" = "karolisRole", "photo" = "img/team/karolis-vycius.jpeg", "email" = "k.vycius@gmail.com", "social" = {"facebook" = "https://www.facebook.com/vycius/", "linkedin"= "https://www.linkedin.com/in/vycius/"}},
     {"name" = "dr. Laurynas Rimševičius", "role" = "laurynasRole", "photo" = "img/team/laurynas.jpg", "email" = "laurynas.rimsevicius@santa.lt", "social" = {"facebook" = "https://www.facebook.com/laurynas.rim", "linkedin"= "https://www.linkedin.com/in/laurynas-rimsevicius-17792217a/"}},{"name" = "Edita Saukaitytė-Butvilė", "role" = "editaRole", "photo" = "img/team/edita.jpg", "email" = "saukaityte.edita@gmail.com ", "social" = {"facebook" = "https://www.facebook.com/edita.saukaityte.7"}},
 ]

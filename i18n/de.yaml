@@ -61,8 +61,7 @@
 - id: sectionNutritionStatement2Title
   translation: "Sehen Sie den Fortschritt des Tages"
 - id: sectionNutritionStatement2Description
-  translation: "Sehen Sie den Fortschritt des Tages
-NephroGo berechnet, wie viel und welche Elektrolyte Sie heute noch verbrauchen können, ohne Ihre Nieren zu schädigen."
+  translation: "Sehen Sie den Fortschritt des Tages NephroGo berechnet, wie viel und welche Elektrolyte Sie heute noch verbrauchen können, ohne Ihre Nieren zu schädigen."
 - id: sectionNutritionStatement3Title
   translation: "Beobachten Sie die Dynamik der Woche"
 - id: sectionNutritionStatement3Description

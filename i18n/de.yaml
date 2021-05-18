@@ -2,14 +2,14 @@
   translation: "DE"
   
 - id: title
-  translation: "NephroGo - easier control of the chronic kidney disease!"
+  translation: "NephroGo – eine einfachere Kontrolle der chronischen Nierenerkrankung!"
 
 - id: headerName
   translation: "NephroGo"
 - id: headerDescription
-  translation: "NephroGo (german) – the app created by nephrologists and nutritionists which helps to follow a proper kidney friendly diet, track your daily intake of nutrients, electrolytes, fluids, energy, record, analyze daily changes of your health condition and to perform peritoneal dialysis comfortably"
+  translation: "NephroGo - die von Nephrologen und Ernährungswissenschaftlern entwickelte App, mit der Sie eine nierenfreundliche Ernährung einhalten, Ihre tägliche Aufnahme von Nährstoffen, Elektrolyten, Flüssigkeiten, Energie verfolgen, tägliche Veränderungen Ihres Gesundheitszustands aufzeichnen, tägliche Veränderungen Ihres Gesundheitszustands analysieren und die Peritonealdialyse bequem durchführen können"
 - id: headerMoto
-  translation: "easier control of the chronic kidney disease"
+  translation: "eine einfachere Kontrolle der chronischen Nierenerkrankung"
 
 - id: logoDescription
   translation: NephroGo logo
@@ -24,52 +24,53 @@
 
 # Benefits
 - id: sectionBenefitsTitle
-  translation: "Benefits"
+  translation: "Vorteiles"
 - id: sectionBenefits1Title
-  translation: "Peritoneal dialysis"
+  translation: "Peritonealdialyse"
 - id: sectionBenefits1Description
-  translation: "You will perform peritoneal dialysis conveniently with NephroGo"
+  translation: "Mit NephroGo führen Sie bequem eine Peritonealdialyse durch"
 - id: sectionBenefits2Title
-  translation: "Proper diet"
+  translation: "Richtige Ernährung"
 - id: sectionBenefits2Description
-  translation: "You will follow a proper kidney-friendly diet"
+  translation: "Sie werden eine richtige nierenfreundliche Ernährung befolgen"
 - id: sectionBenefits3Title
-  translation: "Health condition"
+  translation: "Gesundheitszustand"
 - id: sectionBenefits3Description
-  translation: "You will learn how to observe the status of your health"
+  translation: "Sie lernen, wie Sie den Gesundheitszustand beobachten können"
 - id: sectionBenefits4Title
-  translation: "Management of CKD"
+  translation: "Management von chronischen Nierenerkrankungen"
 - id: sectionBenefits4Description
-  translation: "You will gain self-confidence in managing your CKD"
+  translation: "Sie gewinnen Selbstvertrauen bei der Behandlung Ihrer chronischen Nierenerkrankung"
 - id: sectionBenefits5Title
-  translation: "Reduced burden"
+  translation: "Reduzierte Belastung"
 - id: sectionBenefits5Description
-  translation: "You will reduce the burden of your chronic kidney disease"
+  translation: "Sie reduzieren die Belastung durch Ihre chronische Nierenerkrankung"
 - id: sectionBenefits6Title
-  translation: "Progression of CKD"
+  translation: "Entwicklung der chronischen Nierenerkrankung"
 - id: sectionBenefits6Description
-  translation: "You will reduce the progression of CKD"
+  translation: "Sie reduzieren die Entwicklung einer chronischen Nierenerkrankung"
 
 # Nutrients sector
 - id: sectionNutritionTitle
-  translation: "Personalised counter of nutrients"
+  translation: "Personalisierter Nährstoffzähler"
   
 - id: sectionNutritionStatement1Title
-  translation: "Type the product"
+  translation: "Geben Sie das Produkt ein"
 - id: sectionNutritionStatement1Description
-  translation: "Type the product you have eaten and you instantly will find out how much potassium, sodium, phosphorus, proteins, fluids and kilocalories you have consumed."
+  translation: "Geben Sie das Produkt ein, das Sie gegessen haben, und Sie werden sofort herausfinden, wie viel Kalium, Natrium, Phosphor, Proteine, Flüssigkeiten und Kilokalorien Sie konsumiert haben."
 - id: sectionNutritionStatement2Title
-  translation: "See the progress of the day"
+  translation: "Sehen Sie den Fortschritt des Tages"
 - id: sectionNutritionStatement2Description
-  translation: "NephroGo will calculate how much and which electrolytes you can still consume today without causing any damage to your kidneys."
+  translation: "Sehen Sie den Fortschritt des Tages
+NephroGo berechnet, wie viel und welche Elektrolyte Sie heute noch verbrauchen können, ohne Ihre Nieren zu schädigen."
 - id: sectionNutritionStatement3Title
-  translation: "Observe the dynamics of the week"
+  translation: "Beobachten Sie die Dynamik der Woche"
 - id: sectionNutritionStatement3Description
-  translation: "By checking the summaries of the week, you will know if you have managed to follow a proper kidney friendly diet."
+  translation: "Wenn Sie die Zusammenfassungen der Woche überprüfen, wissen Sie, ob Sie es geschafft haben, eine richtige nierenfreundliche Ernährung zu befolgen."
 - id: sectionNutritionStatement4Title
-  translation: "Control your diet"
+  translation: "Kontrollieren Sie Ihre Ernährung"
 - id: sectionNutritionStatement4Description
-  translation: "Control your diet simply and easily with NephroGo."
+  translation: "Kontrollieren Sie Ihre Ernährung einfach und problemlos mit NephroGo."
 
 # Health indicators screen
 - id: sectionHealthIndicatorsTitle

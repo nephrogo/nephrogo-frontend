@@ -74,63 +74,63 @@ NephroGo berechnet, wie viel und welche Elektrolyte Sie heute noch verbrauchen k
 
 # Health indicators screen
 - id: sectionHealthIndicatorsTitle
-  translation: "Health status"
+  translation: "Gesundheitszustand"
   
 - id: sectionHealthIndicatorsStatement1Title
-  translation: "Record your health data"
+  translation: "Notieren Sie Ihre Gesundheitsdaten"
 - id: sectionHealthIndicatorsStatement1Description
-  translation: "Record your blood pressure, weight, urine volume, blood glucose, swelling and well-being on a daily basis."
+  translation: "Notieren Sie täglich Ihren Blutdruck, Ihr Gewicht, Ihr Urinvolumen, Ihren Blutzucker, Ihre Schwellung und Ihr Wohlbefinden."
 - id: sectionHealthIndicatorsStatement2Title
-  translation: "Track the dynamics"
+  translation: "Verfolgen Sie die Dynamik"
 - id: sectionHealthIndicatorsStatement2Description
-  translation: "Track the dynamics of your health status and notice significant changes at an initial stage."
+  translation: "Verfolgen Sie die Dynamik Ihres Gesundheitszustands und stellen Sie in einem Anfangsstadium signifikante Änderungen fest."
 - id: sectionHealthIndicatorsStatement3Title
-  translation: "Notice significant symptoms"
+  translation: "Beachten Sie Hauptsymptome"
 - id: sectionHealthIndicatorsStatement3Description
-  translation: "Identify deficiency or excess of electorolytes by monitoring your symptoms."
+  translation: "Identifizieren Sie einen Mangel oder Überschuss an Elektrolyten, indem Sie Ihre Symptome überwachen."
 - id: sectionHealthIndicatorsStatement4Title
-  translation: "Save the data"
+  translation: "Sichere die Daten"
 - id: sectionHealthIndicatorsStatement4Description
-  translation: "Keep the data of your health status in one place: it will help your doctor to understand your daily well-being and the progress of the CKD."
+  translation: "Bewahren Sie die Daten Ihres Gesundheitszustands an einem Ort auf: Sie helfen Ihrem Arzt, Ihr tägliches Wohlbefinden und den Entwicklung der CUD  zu verstehen."
 
 # Peritoneal dialysis
 - id: sectionPeritonealTitle
-  translation: "Peritoneal dialysis"
+  translation: "Peritonealdialyse"
   
 - id: sectionPeritonealStatement1Title
-  translation: "Perform peritoneal dialysis"
+  translation: "Führen sie die perytonealdialyse durch"
 - id: sectionPeritonealStatement1Description
-  translation: "NephroGo is suituable for both 'manual' and automatic dialysis."
+  translation: "NephroGo eignet sich sowohl für die manuelle als auch für die automatische Dialyse."
 - id: sectionPeritonealStatement2Title
-  translation: "Track the dynamics of fluid balance"
+  translation: "Verfolgen Sie die Dynamik des Flüssigkeitshaushalts"
 - id: sectionPeritonealStatement2Description
-  translation: "Enter the data of dialysis solutions, amount of urine and drinks and NephroGo will calculate your fluid balance."
+  translation: "Geben Sie die Daten der Dialyselösungen, die Menge an Urin und Getränken ein und NephroGo berechnet Ihren Flüssigkeitshaushalt."
 - id: sectionPeritonealStatement3Title
-  translation: "Monitor your health status"
+  translation: "Verfolgen Sie die Dynamik des Flüssigkeitshaushalts"
 - id: sectionPeritonealStatement3Description
-  translation: "Record arterial blood pressure, pulse, body weight and urine volume before the dialysis."
+  translation: "Geben Sie die Daten der Dialyselösungen, die Urinmengeund Fluss und Flüssigheitsanfnahme ein und NephroGo berechnet Ihren Flüssigkeitshaushalt."
 - id: sectionPeritonealStatement4Title
-  translation: "Get a dialysis record"
+  translation: "Holen Sie sich eine Dialyse-Aufzeichnung"
 - id: sectionPeritonealStatement4Description
-  translation: "NephroGo will prepare a dialysis data sheet for you which you can easily share with your doctor."
+  translation: "NephroGo erstellt für Sie ein Dialysedatenblatt, das Sie problemlos an Ihren Arzt weitergeben können."
 
 
 # Team
 - id: teamSectionTitle
-  translation: "Team"
+  translation: "Mannschaft"
 - id: giedreRole
-  translation: "Co-founder"
+  translation: "Mitbegründer"
 - id: karolisRole
-  translation: "Co-founder"
+  translation: "Mitbegründer"
 - id: editaRole
-  translation: "Dietitian"
+  translation: "Ernährungsberater"
 - id: laurynasRole
-  translation: "Nephrologist"
+  translation: "Nephrologe"
 
 
   # Partners
 - id: sectionPartnersTitle
-  translation: "NephroGo partners"
+  translation: "NephroGo Partner"
 - id: sectionPartnersEU
   translation: "European Union"
 - id: sectionPartnersVU

@@ -140,17 +140,17 @@ NephroGo berechnet, wie viel und welche Elektrolyte Sie heute noch verbrauchen k
 
   # Privacy policy
 - id: privacyPolicyPopupText
-  translation: "This website uses 'cookies' to give You the best, most relevant experience. You can find out more about them in"
+  translation: "Diese Website verwendet "Cookies", um Ihnen die beste und relevanteste Erfahrung zu bieten. Mehr darüber erfahren Sie in"
 - id: privacyPolicyPopupLinkText
-  translation: "Privacy policy"
+  translation: "Datenschutzbestimmungen"
 - id: privacyPolicyPopupAgree
-  translation: "Agree"
+  translation: "Zustimmen"
   
 
   # Footer
 - id: footerFairUseRules
-  translation: "Fair use rules"
+  translation: "Regel zur angemessenen Verwendung"
 - id: footerPrivacyPolicy
-  translation: "Privacy policy"
+  translation: "Datenschutzbestimmungen"
 - id: footerAllRightsReserver
-  translation: "All rights reserved "
+  translation: "Alle Rechte vorbehalten"

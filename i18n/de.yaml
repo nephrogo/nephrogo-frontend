@@ -139,7 +139,7 @@
 
   # Privacy policy
 - id: privacyPolicyPopupText
-  translation: "Diese Website verwendet "Cookies", um Ihnen die beste und relevanteste Erfahrung zu bieten. Mehr darüber erfahren Sie in"
+  translation: "Diese Website verwendet \"Cookies\", um Ihnen die beste und relevanteste Erfahrung zu bieten. Mehr darüber erfahren Sie in"
 - id: privacyPolicyPopupLinkText
   translation: "Datenschutzbestimmungen"
 - id: privacyPolicyPopupAgree

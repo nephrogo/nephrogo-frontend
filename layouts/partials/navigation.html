@@ -13,14 +13,20 @@
                 </a>
             </div>
 
-            <div class="col-7 col-lg-5 text-right">
-                <nav class="nav nav-navbar d-inline-flex">
-                    <div class="nav-item">
-                        <a rel="alternate" href="{{ T "nextLanguageURL" }}" class="nav-link" hreflang="{{ T "nextLanguageTitle" |lower }}"
-                            lang="{{ T "nextLanguageTitle" | lower }}">
-                            {{ T "nextLanguageTitle" }}
-                        </a>
-                    </div>
+            <div class="col-7 col-lg-5">
+                    <nav class="nav nav-navbar flex-row-reverse">
+                    {{ if ne .Site.Language.Lang "lt" }}
+                        <a rel="alternate" href="https://www.nephrogo.lt/" class="nav-link" hreflang="lt"
+                            lang="lt">LT</a>
+                    {{ end }}
+                    {{ if ne .Site.Language.Lang "de" }}
+                    <a rel="alternate" href="https://www.nephrogo.de/" class="nav-link" hreflang="de"
+                        lang="de">DE</a>
+                    {{ end }}
+                    {{ if ne .Site.Language.Lang "en" }}
+                    <a rel="alternate" href="https://www.nephrogo.com/" class="nav-link" hreflang="en"
+                        lang="en">EN</a>
+                    {{ end }}
                 </nav>
             </div>
 

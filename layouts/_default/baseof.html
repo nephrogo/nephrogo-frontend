@@ -10,6 +10,10 @@
 
     {{ $css := resources.Get "css/page.min.css" | resources.Fingerprint "sha512" }}
 
+    <link rel="alternate" hreflang="en" href="https://www.nephrogo.com/">
+    <link rel="alternate" hreflang="lt" href="https://www.nephrogo.lt/">
+    <link rel="alternate" hreflang="de" href="https://www.nephrogo.de/">
+
     <link href="{{ $css.Permalink }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 

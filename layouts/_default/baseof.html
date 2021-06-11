@@ -53,8 +53,30 @@
             {
               "@context": "https://schema.org",
               "@type": "Organization",
+              "name": "NephroGo",
+              "foundingDate": "2020",
+              "founders": [
+                {
+                "@type": "Person",
+                "name": "Karolis Vyčius"
+                },
+                {
+                "@type": "Person",
+                "name": "Giedrė Žulpaitė"
+                } 
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "telephone": "[+37065253669]",
+                "email": "info@nephrogo.com"
+                },
               "url": "{{ "/" | absURL }}",
-              "logo": "{{ resources.Get "img/nephrogo-square-logo.png" | absURL }}"
+              "logo": "{{ resources.Get "img/nephrogo-square-logo.png" | absURL }}",
+              "sameAs": [ 
+                "https://play.google.com/store/apps/details?id=com.nephrogo",
+                "https://apps.apple.com/us/app/nephrogo/id1549505165"
+               ]
             }
     </script>
 </head>

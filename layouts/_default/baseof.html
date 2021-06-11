@@ -48,6 +48,15 @@
 
     gtag('config', '{{ T "googleAnalyticsMeasurementId" }}');
     </script>
+    
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "{{ "/" | absURL }}",
+              "logo": "{{ resources.Get "img/nephrogo-square-logo.png" | absURL }}"
+            }
+    </script>
 </head>
 
 <body>

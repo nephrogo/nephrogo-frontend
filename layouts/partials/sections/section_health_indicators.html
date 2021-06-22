@@ -16,7 +16,7 @@
       </div>
 
       <div class="col-md-5 text-center ">
-        {{ with resources.Get "img/app/screen-health-status.png" }}
+        {{ with resources.Get $.Site.Params.healthStatusScreenshot }}
         {{ $thumb := (.Resize "300x").RelPermalink }}
         <img class="ml-40" src="{{ $thumb }}" alt="{{ T " sectionHealthIndicatorsTitle" }}">
         {{ end }}

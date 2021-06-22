@@ -11,3 +11,6 @@ quality = 85
 
 [languages]
   [languages.en]
+    nutritionScreenshot = "img/app/lt/screen-nutrition.png"
+    healthStatusScreenshot = "img/app/lt/screen-health-status.png"
+    peritonealDialysisScreenshot = "img/app/lt/screen-peritoneal-dialysis.png"

@@ -16,7 +16,7 @@
       </div>
 
       <div class="col-md-5 text-center order-md-first">
-        {{ with resources.Get "img/app/screen-peritoneal-dialysis.png" }}
+        {{ with resources.Get $.Site.Params.peritonealDialysisScreenshot }}
           {{ $thumb := (.Resize "300x").RelPermalink }}
           <img class="mr-40" src="{{ $thumb }}" alt="{{ T " sectionPeritonealTitle" }}">
         {{ end }}

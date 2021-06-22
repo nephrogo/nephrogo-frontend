@@ -14,9 +14,9 @@
           {{ end }}
         </div>
       </div>
-
+      
       <div class="col-md-5 text-center order-md-first">
-        {{ with resources.Get "img/app/screen-nutrition.png" }}
+        {{ with resources.Get $.Site.Params.nutritionscreenshot }}
           {{ $thumb := (.Resize "300x").RelPermalink }}
           <img class="mr-40" src="{{ $thumb }}" alt="{{ T " sectionNutritionTitle" }}">
         {{ end }}

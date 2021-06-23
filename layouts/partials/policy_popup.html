@@ -3,7 +3,7 @@
     <div class="row gap-y align-items-center">
         <div class="col-md">
             {{ T "privacyPolicyPopupText" }}
-            {{ $pdf := resources.Get "documents/lt/privacy-policy.pdf" }}
+            {{ $pdf := resources.Get $.Site.Params.privacyPolicyPath }}
 
             <a href="{{ $pdf.Permalink }}" target="_blank" rel="nofollow">{{ T "privacyPolicyPopupLinkText"}}</a>.
         </div>

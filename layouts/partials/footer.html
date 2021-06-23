@@ -10,8 +10,8 @@
         </div>
         <br>
 
-        {{ $privacyPolicy := resources.Get "documents/lt/privacy-policy.pdf" }}
-        {{ $fairUseRules := resources.Get "documents/lt/fair-use-rules.pdf" }}
+        {{ $privacyPolicy := resources.Get $.Site.Params.privacyPolicyPath }}
+        {{ $fairUseRules := resources.Get $.Site.Params.fairUseRulesPath }}
 
         <div class="nav nav-bolder nav-uppercase nav-center">
             <a class="nav-link" href="{{ $fairUseRules.Permalink }}" rel="nofollow" target="_blank">

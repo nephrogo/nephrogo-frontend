@@ -56,6 +56,9 @@ jobs:
         run: hugo --minify --destination public/de --config config-de.toml
 
       - run: ls -la public/de
+      - run: ls -la public/lt
+      - run: ls -la public/en
+
       
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

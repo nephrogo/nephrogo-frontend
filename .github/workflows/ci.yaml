@@ -44,7 +44,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.83.1'
       
       - name: Build LT
         run: hugo --minify --destination public/lt --config config-lt.toml

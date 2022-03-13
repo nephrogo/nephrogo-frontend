@@ -16,3 +16,4 @@ quality = 85
     nutritionScreenshot = "img/app/de/screen-nutrition.png"
     healthStatusScreenshot = "img/app/de/screen-health-status.png"
     peritonealDialysisScreenshot = "img/app/de/screen-peritoneal-dialysis.png"
+    socialCover = "img/social-cover-de.png"

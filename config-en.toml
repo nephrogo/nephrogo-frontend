@@ -11,8 +11,8 @@ quality = 85
 
 [languages]
   [languages.en]
-    privacyPolicyPath = "documents/lt/privacy-policy.pdf"
-    fairUseRulesPath = "documents/lt/fair-use-rules.pdf"
+    privacyPolicyPath = "documents/en/privacy-policy.pdf"
+    fairUseRulesPath = "documents/en/fair-use-rules.pdf"
     nutritionScreenshot = "img/app/lt/screen-nutrition.png"
     healthStatusScreenshot = "img/app/lt/screen-health-status.png"
     peritonealDialysisScreenshot = "img/app/lt/screen-peritoneal-dialysis.png"

@@ -1,0 +1,69 @@
+name: Deploy production
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-production:
+    name: Build hugo
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        language: [ lt, en, de ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Gulp
+        run: npm install gulp-cli -g
+
+      - name: Install Node packages
+        run: npm install
+        working-directory: theme-generator
+
+      - name: Gulp generate
+        run: gulp dist
+        working-directory: theme-generator
+
+      - run: cp -a theme-generator/dist/assets/. static/
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.83.1'
+
+      - name: Build ${{ matrix.language }}
+        run: hugo --minify --destination public --config config-${{ matrix.language }}.toml
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: nephrogo-frontend
+          directory: public
+          branch: ${{ matrix.language }}
+          wranglerVersion: '3'
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.language }}-web
+          path: public
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.language }}-package-lock.json
+          path: theme-generator/package-lock.json

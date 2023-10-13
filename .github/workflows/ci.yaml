@@ -2,7 +2,7 @@ name: Continous integration for NepgroGo frontend
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build_hugo:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -38,20 +38,20 @@ jobs:
       - name: Gulp generate
         run: gulp dist
         working-directory: theme-generator
-         
+
       - run: cp -a theme-generator/dist/assets/. static/
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.83.1'
-      
+
       - name: Build LT
         run: hugo --minify --destination public/lt --config config-lt.toml
 
       - name: Build EN
         run: hugo --minify --destination public/en --config config-en.toml
-      
+
       - name: Build DE
         run: hugo --minify --destination public/de --config config-de.toml
 
@@ -59,12 +59,7 @@ jobs:
       - run: ls -la public/lt
       - run: ls -la public/en
 
-      
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: actions/upload-artifact@v3
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NEPHROGO_F06FE }}'
-          channelId: live
-          projectId: nephrogo-f06fe
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+          name: ${{ matrix.language }}-package-lock.json
+          path: theme-generator/package-lock.json

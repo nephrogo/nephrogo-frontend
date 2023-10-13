@@ -10,7 +10,7 @@ permissions:
 jobs:
   deploy-production:
     name: Build hugo
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     timeout-minutes: 30
     environment: production
     permissions:

@@ -61,5 +61,5 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.language }}-package-lock.json
-          path: theme-generator/package-lock.json
+          name: package-lock.json
+          path: package-lock.json

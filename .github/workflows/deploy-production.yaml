@@ -56,14 +56,8 @@ jobs:
           projectName: nephrogo-frontend
           directory: public
           branch: ${{ matrix.language }}
-          wranglerVersion: '3'
 
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.language }}-web
           path: public
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: ${{ matrix.language }}-package-lock.json
-          path: theme-generator/package-lock.json

@@ -14,31 +14,17 @@
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
-    "ajv": "^6.10.2",
-    "ajv-keywords": "^3.4.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
+    "browser-sync": "^3.0.3",
     "countup.js": "^2.0.4",
-    "cross-env": "^6.0.3",
-    "del": "^5.1.0",
     "et-line": "^1.0.1",
     "font-awesome": "^4.7.0",
     "granim": "^2.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cache": "^1.1.3",
-    "gulp-changed": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-file": "^0.4.0",
-    "gulp-imagemin": "^6.2.0",
-    "gulp-load-plugins": "^2.0.1",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "gulp-zip": "^5.0.1",
+    "gulp-sass": "^6.0.1",
     "imagesloaded": "^4.1.4",
     "jarallax": "^1.12.0",
     "jquery": "^3.4.1",
@@ -46,18 +32,17 @@
     "jquery.photoswipe": "^1.1.1",
     "lity": "^2.4.0",
     "material-design-icons": "^3.0.1",
-    "node-sass-tilde-importer": "^1.0.2",
     "objectFitPolyfill": "^2.3.0",
     "popper.js": "^1.16.0",
-    "run-sequence": "^2.2.1",
+    "sass": "^1.80.0",
     "shufflejs": "^5.2.3",
     "slick-carousel": "^1.8.1",
     "smoothscroll-for-websites": "^1.4.10",
     "themify-icons": "^1.0.0",
     "typed.js": "^2.0.11",
-    "uglifyjs-webpack-plugin": "2.2.0",
     "waypoints": "^4.0.1",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.95.0",
+    "webpack-stream": "^7.0.0"
   },
   "browserslist": [
     ">= 1%",
@@ -73,11 +58,16 @@
     "not ExplorerMobile <= 11"
   ],
   "engines": {
-    "node": ">=6.5",
-    "npm": ">=3.10"
+    "node": ">=22"
   },
-  "dependencies": {
-    "natives": "^1.1.6",
-    "npm": "^6.13.4"
+  "scripts": {
+    "build": "gulp dist",
+    "dev": "gulp dev",
+    "watch": "gulp watch"
+  },
+  "allowScripts": {
+    "@fortawesome/fontawesome-free": false,
+    "@parcel/watcher": false,
+    "fsevents": false
   }
 }

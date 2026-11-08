@@ -42,7 +42,7 @@
 }
 
 // Disable transform from/to top
-.modal.fade:not(.modal-top, .modal-bottom) .modal-dialog {
+.modal.fade:not(.modal-top):not(.modal-bottom) .modal-dialog {
   transform: translate(0,0);
 }
 

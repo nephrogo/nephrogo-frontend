@@ -25,19 +25,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: theme-generator/package-lock.json
 
-      - name: Install Gulp
-        run: npm install gulp-cli -g
-
       - name: Install Node packages
-        run: npm install
+        run: npm ci
         working-directory: theme-generator
 
       - name: Gulp generate
-        run: gulp dist
+        run: npm run build
         working-directory: theme-generator
 
       - run: cp -a theme-generator/dist/assets/. static/

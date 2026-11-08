@@ -10,23 +10,13 @@ jobs:
     runs-on: ubuntu-26.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '14'
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: theme-generator/node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          cache: npm
+          cache-dependency-path: theme-generator/package-lock.json
 
       - name: Install Gulp
         run: npm install gulp-cli -g
@@ -42,7 +32,7 @@ jobs:
       - run: cp -a theme-generator/dist/assets/. static/
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.83.1'
 
@@ -59,7 +49,7 @@ jobs:
       - run: ls -la public/lt
       - run: ls -la public/en
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: package-lock.json
           path: public/lt/package-lock.json

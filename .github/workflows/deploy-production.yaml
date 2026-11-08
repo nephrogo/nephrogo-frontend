@@ -21,23 +21,20 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: '14'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: theme-generator/package-lock.json
 
-      - name: Install Gulp
-        run: npm install gulp-cli -g
-
       - name: Install Node packages
-        run: npm install
+        run: npm ci
         working-directory: theme-generator
 
       - name: Gulp generate
-        run: gulp dist
+        run: npm run build
         working-directory: theme-generator
 
       - run: cp -a theme-generator/dist/assets/. static/
@@ -51,13 +48,13 @@ jobs:
         run: hugo --minify --destination public --config config-${{ matrix.language }}.toml
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=nephrogo-frontend --branch=${{ matrix.language }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.language }}-web
           path: public

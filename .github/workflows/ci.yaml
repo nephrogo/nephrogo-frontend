@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
   build_hugo:
@@ -10,23 +11,20 @@ jobs:
     runs-on: ubuntu-26.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: '14'
+          node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: theme-generator/package-lock.json
 
-      - name: Install Gulp
-        run: npm install gulp-cli -g
-
       - name: Install Node packages
-        run: npm install
+        run: npm ci
         working-directory: theme-generator
 
       - name: Gulp generate
-        run: gulp dist
+        run: npm run build
         working-directory: theme-generator
 
       - run: cp -a theme-generator/dist/assets/. static/
@@ -45,11 +43,7 @@ jobs:
       - name: Build DE
         run: hugo --minify --destination public/de --config config-de.toml
 
-      - run: ls -la public/de
-      - run: ls -la public/lt
-      - run: ls -la public/en
-
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: package-lock.json
-          path: public/lt/package-lock.json
+          name: web
+          path: public

@@ -1,21 +1,14 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+const { pathToFileURL } = require('url');
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
-const webpackUglifyJs = require('uglifyjs-webpack-plugin')
-const sass = require('gulp-sass');
-const tildeImporter = require('node-sass-tilde-importer');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync');
-const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
 const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
-const del = require('del');
-const sequence = require('run-sequence');
-const pkg = require('./package.json')
 
 var production = false;
 
@@ -36,6 +29,20 @@ const dir = {
   font:   'src/assets/fonts/',
 }
 
+// Resolves webpack-style `@import "~pkg/..."` against node_modules.
+const tildeImporter = {
+  findFileUrl(url) {
+    if (!url.startsWith('~')) return null;
+    return pathToFileURL(path.join(__dirname, 'node_modules', url.slice(1)));
+  },
+};
+
+const sassOptions = {
+  importers: [tildeImporter],
+  quietDeps: true,
+  // ponytail: Bootstrap 4 theme sources predate the Sass module system; silence until migrating to Bootstrap 5.
+  silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'slash-div', 'abs-percent', 'function-units'],
+};
 
 
 /*
@@ -67,29 +74,24 @@ function serve(done) {
 |--------------------------------------------------------------------------
 |
 */
-function scss() {
-
-  var stream = gulp.src(page.scss)
-    .pipe( sourcemaps.init() )
+function scssMinified() {
+  return gulp.src(page.scss, { sourcemaps: true })
     .pipe( rename( { suffix: '.min' } ) )
-    .pipe( sass({ importer: tildeImporter, outputStyle: 'compressed' }).on('error', sass.logError) )
-    .pipe( autoprefixer())
-    .pipe( sourcemaps.write('.') )
-    .pipe( gulp.dest(dir.css) )
+    .pipe( sass({ ...sassOptions, style: 'compressed' }).on('error', sass.logError) )
+    .pipe( autoprefixer() )
+    .pipe( gulp.dest(dir.css, { sourcemaps: '.' }) )
     .pipe( browserSync.stream() );
+};
 
-  // Create unminified version if it's in production mode
-  if ( production ) {
-    stream = gulp.src(page.scss)
-      .pipe( sourcemaps.init() )
-      .pipe( sass({importer: tildeImporter}).on('error', sass.logError) )
-      .pipe( autoprefixer())
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest(dir.css) );
-  }
+function scssExpanded() {
+  return gulp.src(page.scss, { sourcemaps: true })
+    .pipe( sass(sassOptions).on('error', sass.logError) )
+    .pipe( autoprefixer() )
+    .pipe( gulp.dest(dir.css, { sourcemaps: '.' }) );
+};
 
-  return stream;
-
+function scss(done) {
+  return production ? gulp.parallel(scssMinified, scssExpanded)(done) : scssMinified();
 };
 
 
@@ -99,27 +101,13 @@ function scss() {
 |--------------------------------------------------------------------------
 |
 */
-function js() {
+function bundle(mode, filename) {
   return gulp.src(page.js)
     .pipe(webpack({
-      mode: 'none',
+      mode: mode,
       devtool: 'source-map',
       output: {
-        filename: 'page.min.js'
-      }
-    }))
-    .pipe( gulp.dest(dir.js) );
-
-};
-
-
-function jsProductionMinified() {
-  return gulp.src(page.js)
-    .pipe(webpack({
-      mode: 'production',
-      devtool: 'source-map',
-      output: {
-        filename: 'page.min.js'
+        filename: filename
       },
       performance: {
         hints: false
@@ -128,18 +116,9 @@ function jsProductionMinified() {
     .pipe( gulp.dest(dir.js) );
 };
 
-
-function jsProductionExpanded() {
-  return gulp.src(page.js)
-    .pipe(webpack({
-      mode: 'none',
-      devtool: 'source-map',
-      output: {
-        filename: 'page.js'
-      }
-    }))
-    .pipe( gulp.dest(dir.js) );
-};
+const js = () => bundle('none', 'page.min.js');
+const jsProductionMinified = () => bundle('production', 'page.min.js');
+const jsProductionExpanded = () => bundle('none', 'page.js');
 
 
 /*
@@ -148,16 +127,16 @@ function jsProductionExpanded() {
 |--------------------------------------------------------------------------
 |
 */
-function copyFonts(done) {
-  //gulp.src( 'node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*').pipe(gulp.dest(dir.font));
-  gulp.src( 'node_modules/font-awesome/fonts/*').pipe(gulp.dest(dir.font));
-  gulp.src( 'node_modules/themify-icons/themify-icons/fonts/*').pipe(gulp.dest(dir.font));
-  gulp.src( 'node_modules/et-line/fonts/*').pipe(gulp.dest(dir.font));
-  done();
+function copyFonts() {
+  return gulp.src([
+    'node_modules/font-awesome/fonts/*',
+    'node_modules/themify-icons/themify-icons/fonts/*',
+    'node_modules/et-line/fonts/*',
+  ], { encoding: false }).pipe(gulp.dest(dir.font));
 };
 
 function distCopy() {
-  return gulp.src( ['src/**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('dist/'));
+  return gulp.src( ['src/**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'], { encoding: false } ).pipe(gulp.dest('dist/'));
 };
 
 
@@ -167,21 +146,11 @@ function distCopy() {
 |--------------------------------------------------------------------------
 |
 */
-function distClean() {
-  return del('dist/');
+function distClean(done) {
+  fs.rmSync('dist/', { recursive: true, force: true });
+  done();
 };
 
-/*
-|--------------------------------------------------------------------------
-| Img
-|--------------------------------------------------------------------------
-|
-*/
-function img() {
-  return gulp.src('src/assets/img/**/*.{jpg,jpeg,png,gif}')
-    .pipe( imagemin() )
-    .pipe( gulp.dest('src/assets/img/') );
-};
 
 /*
 |--------------------------------------------------------------------------

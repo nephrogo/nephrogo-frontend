@@ -16,11 +16,6 @@
 - id: logoDescription
   translation: NephroGo logo
 
-- id: nextLanguageTitle
-  translation: LT
-- id: nextLanguageURL
-  translation: https://www.nephrogo.lt/
-
 - id: googleAnalyticsMeasurementId
   translation: G-X8PMMMC5PK
 
@@ -155,3 +150,8 @@
   translation: "Privacy policy"
 - id: footerAllRightsReserver
   translation: "All rights reserved "
+
+- id: notFoundDescription
+  translation: "The page you are looking for does not exist."
+- id: notFoundBackHome
+  translation: "Back to home page"

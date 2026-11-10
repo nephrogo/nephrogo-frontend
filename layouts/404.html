@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<header class="header text-white h-fullscreen">
+    <div class="bg-primary overlay opacity-80"></div>
+
+    <div class="container text-center">
+        <div class="row h-100">
+            <div class="col-lg-8 mx-auto align-self-center">
+                <h1 class="display-1 my-6"><strong>404</strong></h1>
+                <p class="lead-3">{{ T "notFoundDescription" }}</p>
+                <a class="btn btn-lg btn-round btn-white mt-7" href="{{ "/" | relLangURL }}">{{ T "notFoundBackHome" }}</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{{ end }}

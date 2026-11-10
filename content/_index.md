@@ -1,4 +1,7 @@
 +++
+# Shared by all languages; texts come from i18n
+sites.matrix.languages = ["**"]
+
 benefits = [
     {"title" = "sectionBenefits1Title", "description" = "sectionBenefits1Description", "icon" = "water_damage", "iconClass" = "text-dark"},
     {"title" = "sectionBenefits2Title", "description" = "sectionBenefits2Description", "icon" = "add_task", "iconClass" = "text-primary"},

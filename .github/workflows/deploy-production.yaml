@@ -15,9 +15,6 @@ jobs:
     environment: production
     permissions:
       contents: read
-    strategy:
-      matrix:
-        language: [ lt, en, de ]
 
     steps:
       - name: Checkout
@@ -42,19 +39,19 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.83.1'
+          hugo-version: '0.169.0'
 
-      - name: Build ${{ matrix.language }}
-        run: hugo --minify --destination public --config config-${{ matrix.language }}.toml
+      - name: Build
+        run: hugo --minify
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=nephrogo-frontend --branch=${{ matrix.language == 'en' && 'main' || matrix.language }}
+          command: pages deploy public --project-name=nephrogo-frontend --branch=main
 
       - uses: actions/upload-artifact@v7
         with:
-          name: ${{ matrix.language }}-web
+          name: web
           path: public

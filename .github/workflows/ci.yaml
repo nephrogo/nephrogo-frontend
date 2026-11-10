@@ -32,16 +32,10 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.83.1'
+          hugo-version: '0.169.0'
 
-      - name: Build LT
-        run: hugo --minify --destination public/lt --config config-lt.toml
-
-      - name: Build EN
-        run: hugo --minify --destination public/en --config config-en.toml
-
-      - name: Build DE
-        run: hugo --minify --destination public/de --config config-de.toml
+      - name: Build
+        run: hugo --minify
 
       - uses: actions/upload-artifact@v7
         with:

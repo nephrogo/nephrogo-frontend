@@ -29,6 +29,6 @@ Temporary Items
 .apdisk
 
 resources/
-.firebase/
 /public/
 /.idea/
+.hugo_build.lock

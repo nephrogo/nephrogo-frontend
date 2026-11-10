@@ -7,7 +7,7 @@
 
             <div class="col-5 col-lg-2 text-lg-center">
                 <button class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
-                <a class="navbar-brand" href="{{ .Permalink }}">
+                <a class="navbar-brand" href="{{ "/" | relLangURL }}">
                     <img class="logo-light" src="{{ resources.Get "/img/logo-light.png" | relURL }}" alt="{{ T "logoDescription" }}">
                     <img class="logo-dark" src="{{ resources.Get "/img/logo-dark.png" | relURL }}" alt="{{ T "logoDescription" }}">
                 </a>
@@ -16,15 +16,15 @@
             <div class="col-7 col-lg-5">
                     <nav class="nav nav-navbar flex-row-reverse">
                     {{ if ne .Site.Language.Lang "lt" }}
-                        <a rel="alternate" href="https://www.nephrogo.lt/" class="nav-link" hreflang="lt"
+                        <a rel="alternate" href="/lt/" class="nav-link" hreflang="lt"
                             lang="lt">LT</a>
                     {{ end }}
                     {{ if ne .Site.Language.Lang "de" }}
-                    <a rel="alternate" href="https://www.nephrogo.de/" class="nav-link" hreflang="de"
+                    <a rel="alternate" href="/de/" class="nav-link" hreflang="de"
                         lang="de">DE</a>
                     {{ end }}
                     {{ if ne .Site.Language.Lang "en" }}
-                    <a rel="alternate" href="https://www.nephrogo.com/" class="nav-link" hreflang="en"
+                    <a rel="alternate" href="/" class="nav-link" hreflang="en"
                         lang="en">EN</a>
                     {{ end }}
                 </nav>

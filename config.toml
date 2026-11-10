@@ -1,13 +1,40 @@
-baseURL = "https://www.nephrogo.com/"
+baseURL = "https://nephrogo.com/"
 defaultContentLanguage = "en"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "term"]
 assetDir = "static"
 enableRobotsTXT = true
-googleAnalytics = "G-YXL4JPN3HT"
 
 [imaging]
 resampleFilter = "lanczos"
+[imaging.jpeg]
 quality = 85
 
 [languages]
   [languages.en]
+    weight = 1
+    [languages.en.params]
+    privacyPolicyPath = "documents/en/privacy-policy.pdf"
+    fairUseRulesPath = "documents/en/fair-use-rules.pdf"
+    nutritionScreenshot = "img/app/lt/screen-nutrition.png"
+    healthStatusScreenshot = "img/app/lt/screen-health-status.png"
+    peritonealDialysisScreenshot = "img/app/lt/screen-peritoneal-dialysis.png"
+    socialCover = "img/social-cover-de.png"
+  [languages.lt]
+    weight = 2
+    [languages.lt.params]
+    privacyPolicyPath = "documents/lt/privacy-policy.pdf"
+    fairUseRulesPath = "documents/lt/fair-use-rules.pdf"
+    nutritionScreenshot = "img/app/lt/screen-nutrition.png"
+    healthStatusScreenshot = "img/app/lt/screen-health-status.png"
+    peritonealDialysisScreenshot = "img/app/lt/screen-peritoneal-dialysis.png"
+    socialCover = "img/social-cover-lt.png"
+  [languages.de]
+    weight = 3
+    [languages.de.params]
+    privacyPolicyPath = "documents/de/privacy-policy.pdf"
+    fairUseRulesPath = "documents/de/fair-use-rules.pdf"
+    nutritionScreenshot = "img/app/de/screen-nutrition.png"
+    healthStatusScreenshot = "img/app/de/screen-health-status.png"
+    peritonealDialysisScreenshot = "img/app/de/screen-peritoneal-dialysis.png"
+    socialCover = "img/social-cover-de.png"
+

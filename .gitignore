@@ -1,4 +1,5 @@
-static/
+static/*
+!static/_redirects
 
 # General
 .DS_Store
